@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+                <meta charset="utf-8">
+                <title> DO IT! </title>
+
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        </head>
+<!-- Always shows a header, even in smaller screens. -->
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">DO IT!</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="help.html">HELP</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">MENU</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="index.html">HOME</a>
+      <a class="mdl-navigation__link" href="record.html">RECORD</a>
+      <a class="mdl-navigation__link" href="view.html">VIEW</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+        <style>  
+    #Out
+{
+     margin: 0 0 0 31%;  /* clock-wise: top right bottom left */
+}
+    
+    #Out1
+{
+     margin: 0 0 0 30%;  /* clock-wise: top right bottom left */
+}
+
+body {background-color:lavender}
+h1   {color:black}
+h1   {font-style: bold}
+                #field {
+                position: absolute;
+                bottom:59%;
+                right: -10%;
+            }
+                #field1 {
+                position: absolute;
+                bottom:45%;
+                right: -10%;
+            }
+                #field2 {
+                position: absolute;
+                top:22% ;
+                bottom:74%;
+                right: 30%;
+            }
+                #field3 {
+                position: absolute;
+                bottom:31%;
+                right: -10%;
+            }
+</style>
+<br>
+        <h1 id= "Out" style="margin-left:16%;font-size:150%">Calories Burnt Information </h1>
+ </div>
+        <br>
+      <label style =margin-top:50%;margin-left:0%;font-size:100% for="username">Gender:</label>
+                            <form action="#">
+ 
+                            <select id="field2" style = margin-left:36%>
+                                <option  value="volvo">Male</option>
+                                <option value="saab">Female</option>
+                            </select>
+                    </form>
+
+        <div class="page-content"><!-- Your content goes here -->
+        <h2 style = font-size:100%;margin-left:0%>Height</h2>
+        <div class="mdl-textfield mdl-js-textfield" id="field">
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="numberInput1" />
+        <label class="mdl-textfield__label" for="sample2" id="numberInput1"><form style = font-size:100%;margin-left:30%  action="#"> Height in centimetres</label>
+        </div>
+        </form>
+
+        </div>
+      
+        <div class="page-content"><!-- Your content goes here -->
+        <h2 style = font-size:100%;margin-left:0%>Weight :</h2>
+        <div class="mdl-textfield mdl-js-textfield" id="field1">
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="numberInput2" />
+        <label class="mdl-textfield__label" for="sample2" id="numberInput2"><form style = font-size:100%;margin-left:31%  action="#"> Weight in Pounds</label>
+        </div>
+        </form>   
+        </div>
+        <div class="page-content"><!-- Your content goes here -->
+        <h2 style = font-size:100%;margin-left:0%>Age :</h2>
+        <div class="mdl-textfield mdl-js-textfield" id="field3">
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="numberInput3" />
+        <label class="mdl-textfield__label" for="sample2" id="numberInput3"><form style = font-size:100%;margin-left:46%  action="#"> Age</label>
+        </div>
+        </form>
+        <input onclick="saveCalories()" style = margin-left:38%;margin-right:30% type="button" value="SAVE" id="myButton2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" ></input>
+        </div>
+        </div>
+        </main>
+        </html>

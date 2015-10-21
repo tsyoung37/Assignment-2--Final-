@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+Created by: Group10
+Group members: Tan Sze Young (26769042)
+               Neo Teck Yoong (25504975)
+               Imaadh Shiham(26420627)
+               Saqlain Ashraf (26532808)
+
+//****************************************RECORD PAGE***************************************************//
+-->
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+    html {
+        height: 100%;
+        margin-left: 0px ;
+        margin-top:0px;
+        padding: 0;
+        width:100%;
+      } 
+        
+        body {
+        height: 100%;
+        margin-left: 0px ;
+        margin-top:0px;
+        padding: 0;
+        width:100%;
+      }
+      #map {
+        height: 50%;
+        margin-left: 0px ;
+        margin-right:0px;
+        margin-top:5px;
+        padding: 0;
+        width:100%;
+      }
+    </style>
+  </head>
+<!-- Simple header with fixed tabs. -->
+
+<!-- Always shows a header, even in smaller screens. -->
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">DO IT!</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="caloriesburnt.html">CALORIES</a>
+        <a class="mdl-navigation__link" href="help.html">HELP</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">MENU</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="index.html">HOME</a>
+      <a class="mdl-navigation__link" href="record.html">RECORD</a>
+      <a class="mdl-navigation__link" href="view.html">VIEW</a>
+    </nav>
+  </div>
+        <style>  
+    #Out
+{
+     margin:2% 0 0 36%;  /* clock-wise: top right bottom left */
+}
+</style>
+    <h id = "Out" style = "font-size:200%">RECORD</h>
+    
+  <body>
+    <div id="map"></div>
+    <script>
+        var map;
+        function initMap() 
+        {
+            map = new google.maps.Map(document.getElementById('map'), 
+                {center: {lat: 3.062975, lng: 101.60013},zoom: 18});
+        }
+      </script>
+      <div id="demo"></div>
+    </body>
+    <br>
+    
+    
+    <input onclick="getLocation()" style = margin-left:30%;margin-right:30% type="button" value="Start/Stop" id="myButton1" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" ></input>
+
+        <input onclick="Save()" style = margin-left:30%;margin-right:30% type="button" value="SAVE" id="myButton2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" ></input>
+
+        <input onclick="clearRoute()" style = margin-left:30%;margin-right:30% type="button" value="CLEAR" id="myButton3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" ></input>
+
+<body >
+	        <h id="stoppa"> 0:0:00:00</h>
+</body>
+         
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&key=&callback=initMap"
+        async defer>
+    </script>
+  	<script src="JS/stopwatch.js"></script>
+    <script src="JS/recordrun.js"></script>
+  </body>
+</html>

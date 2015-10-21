@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--
+Created by: Group10
+Group members: Tan Sze Young (26769042)
+               Neo Teck Yoong (25504975)
+               Imaadh Shiham (26420627)
+               Saqlain Ashraf (26532808)
+
+//****************************************VIEW PAGE***************************************************//
+-->
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>View</title>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- Always shows a header, even in smaller screens. -->
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">DO IT!</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="caloriesburnt.html">CALORIES</a>
+        <a class="mdl-navigation__link" href="help.html">HELP</a>
+    </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">MENU</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="index.html">HOME</a>
+      <a class="mdl-navigation__link" href="record.html">RECORD</a>
+      <a class="mdl-navigation__link" href="view.html">VIEW</a>
+    </nav>
+  </div>
+
+    <style>
+      html, body {
+        height: 100%;
+        padding: 0;
+        width:100%;
+        
+      }
+      #map {
+        height: 50%;
+        width : 100%;  
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+      <table class="mdl-data-table mdl-js-data-table mdl-data-table">
+  <tbody>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Speed</td>
+      <td id="Speed">0 m/s</td>
+      
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Distance</td>
+      <td id="Distance">0m</td>
+      
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Time</td>
+      <td id="Time">0s</td>
+      
+    </tr>
+  </tbody>
+</table>
+      <style>
+          table {
+              height:30%;
+              width:auto;  
+          }
+          #burnburn{
+              button:10%;
+              left:0%;
+          }
+      </style>
+      <div>
+       
+        <button class="mdl-button mdl-js-button mdl-button--primary" style="margin-right:27%;margin-top:-1.9%;" onClick="parent.location ='record.html'">
+          Start
+      </button>
+           
+      <button class="mdl-button mdl-js-button mdl-button--primary" style="margin-left:-30%;margin-top:-1.9%;" onclick="clearButton()";>
+          Clear
+      </button>
+          
+      <button class="mdl-button mdl-js-button mdl-button--primary" style="margin-left:-3%;margin-top:-1.9%;" onClick="parent.location ='recordlist.html'">
+          Load
+      </button>
+          
+      <button class="mdl-button mdl-js-button mdl-button--primary" style="margin-top:-1.9%;" onClick="parent.location ='recordlist.html'">
+          Delete
+      </button>
+        </div>
+        <div>
+      <button class="mdl-button mdl-js-button mdl-button--primary" style="margin-right:50%;margin-top:-2%;" onClick="caloriesBurnt()" id="burnburn">
+          Calories Burn 
+      </button>
+          <p id="cburnt" style="0%;margin-top:-8%;margin-left:40%">0 cal</p>
+      </div>
+      
+      <script src="JS/caloriesburnt.js"></script>
+
+
+    <script>
+        
+        var map;
+        function initMap() 
+        {
+            map = new google.maps.Map(document.getElementById('map'), 
+                {center: {lat: 3.062975, lng: 101.60013},zoom: 18});
+        }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&key=&callback=initMap"
+    async defer>
+    </script>
+      <script>  
+          
+        Retrieve=localStorage.getItem("string")
+        Retrieve1=JSON.parse(localStorage.getItem("savedRunName"))
+        document.getElementById("Speed").innerHTML=Retrieve1.speed
+        document.getElementById("Distance").innerHTML= Retrieve
+        document.getElementById("Time").innerHTML=Retrieve1.distance
+        function clearButton()
+          {
+        document.getElementById("Speed").innerHTML = 0 + "m/s"
+        document.getElementById("Distance").innerHTML = 0 + "m"
+        document.getElementById("Time").innerHTML = 0 + "s"
+          }; 
+      </script>
+  </body>
+</html>

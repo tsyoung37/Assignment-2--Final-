@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--
+Created by: Group10
+Group members: Tan Sze Young (26769042)
+               Neo Teck Yoong (25504975)
+               Imaadh 
+               Saqlain Ashraf
+
+//****************************************RECORD LIST PAGE***************************************************//
+-->
+<html lang="en">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+                <meta charset="utf-8">
+                <title> DO IT! </title>
+
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        </head>
+<!-- Always shows a header, even in smaller screens. -->
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            
+      <!-- Title -->
+      <span class="mdl-layout-title">DO IT!</span>
+            
+      <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="caloriesburnt.html">CALORIES</a>
+                    <a class="mdl-navigation__link" href="help.html">HELP</a>
+            </nav>
+        </div>
+  </header>
+    
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">MENU</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="index.html">HOME</a>
+                <a class="mdl-navigation__link" href="record.html">RECORD</a>
+                    <a class="mdl-navigation__link" href="view.html">VIEW</a>
+    </nav>
+  </div>
+    
+  <main class="mdl-layout__content">
+    <div class="page-content">
+        <style>  
+    #Out
+{
+     margin: 0 0 0 30%;  /* clock-wise: top right bottom left */
+}
+    
+    #Out1
+{
+     margin: 0 0 0 30%;  /* clock-wise: top right bottom left */
+}
+
+    #field 
+{
+    bottom:0%;
+    right: 0%;
+}
+          
+
+body {background-color:lavender}
+h1   {color:black}
+h1   {font-style: bold}
+            
+</style>
+    
+        
+<table id = field class="mdl-data-table mdl-js-data-table mdl-data-table--2dp">
+  <thead>
+    <tr>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="save1"></td>
+      <td id="date"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+ </div>
+      </div>
+    </main>
+    
+    <script>
+    
+    
+    var getName = localStorage.getItem("abcd")
+    
+    document.getElementById("save1").innerHTML=getName
+    
+    document.getElementById("date").innerHTML = Date()
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+
+
+
+
+
+</html>

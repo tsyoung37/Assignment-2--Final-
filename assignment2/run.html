@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+Created by: Group10
+Group members: Tan Sze Young (26769042)
+               Neo Teck Yoong (25504975)
+               Imaadh 
+               Saqlain Ashraf
+
+//****************************************RUN PAGE***************************************************//
+-->
+<html>
+<body>
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";}
+    }
+    
+function showPosition(position) {
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;	
+        var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude); //Makes a latlng
+      map.panTo(latLng); //Make map global
+}
+    
+</script>
+
+</body>
+</html>
